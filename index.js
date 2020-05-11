@@ -23,7 +23,7 @@ bot.on('message', message=>{
             break;
         case 'info':
             if(args[1] === 'version'){
-                message.channel.send('DRIFLOON!, Version 1.0.0');
+                message.channel.send('DRIFLOON!, Version 2.0.0');
             }else{
                 message.channel.send('DRIF DRIF, TYPE "d!info version" instead')
             }
@@ -32,12 +32,21 @@ bot.on('message', message=>{
             message.channel.send('THIS IS WHAT I AM OK! https://66.media.tumblr.com/c4f4df5d805b12ae8fc94ab18aede5af/tumblr_nt5tm2WWlp1uofksuo1_500.png')
             break;
         case 'help':
-            message.channel.send('THIS IS THE COMMAND LIST d!info, d!subscribe, d!what-are-you, d!clear, d!go-drifloon, I HOPE THIS HELPS...')
+            message.channel.send('THIS IS THE COMMAND LIST d!info, d!subscribe, d!what-are-you, d!clear, d!go-drifloon, d!DVD, d!i-wanna-make-my-own-discord-bot, d!Upcoming Commands,  I HOPE THIS HELPS...')
             break;
         case 'clear':
             if(!args[1]) return message.reply('DRIFLOON!,ERROR!! DEFINE THE SECOND STATEMENT,EXAMPLE d!clear 10....TRY AGIAN')
             message.channel.bulkDelete(args[1]);
             break;
+        case 'i-wanna-make-my-own-discord-bot':
+            message.channel.send('This Should Get You Started https://www.youtube.com/watch?v=X_qg0Ut9nU8')
+            break;
+        case 'DVD':
+            message.channel.send('WELL I CAN"T MAKE YOU A DVD BUT I CAN SHOW YOU A PICTURE OF ONE https://i.ebayimg.com/images/g/sP8AAOSwZVlXis-L/s-l400.jpg')
+            break;
+        case 'Upcoming Commands':
+            message.channel.send('Theese Commands Are The Ones Coming To My Bot Soon, d!say')
+            
     }
 })
 
