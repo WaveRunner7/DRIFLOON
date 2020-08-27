@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-
-const PREFIX = 'd!';
+const PREFIX = ('d!');
+const token = 'NzA4MTYxNDMwNzgzOTE4MTMx.XrTjxA.VKknbvjrfJWi2OmDoRDTgl6tz_k'
 
 
 bot.on('ready', () =>{
@@ -13,6 +13,7 @@ bot.on('ready', () =>{
 bot.on('message', message=>{
     
     let args = message.content.substring(PREFIX.length).split(" ");
+
 
     switch(args[0]){
         case 'go-drifloon':
@@ -32,10 +33,10 @@ bot.on('message', message=>{
             message.channel.send('THIS IS WHAT I AM OK! https://66.media.tumblr.com/c4f4df5d805b12ae8fc94ab18aede5af/tumblr_nt5tm2WWlp1uofksuo1_500.png')
             break;
         case 'help':
-            message.channel.send('THIS IS THE COMMAND LIST d!info, d!subscribe, d!what-are-you, d!clear, d!go-drifloon, d!DVD, d!i-wanna-make-my-own-discord-bot, d!Upcoming Commands,  I HOPE THIS HELPS...')
+            message.channel.send('THIS IS THE COMMAND LIST d!info, d!subscribe, d!what-are-you, d!clear(this deletes messages) d!go-drifloon, d!DVD, d!i-wanna-make-my-own-discord-bot, d!upcoming-commands, d!update-log,  I HOPE THIS HELPS...')
             break;
         case 'clear':
-            if(!args[1]) return message.reply('DRIFLOON!,ERROR!! DEFINE THE SECOND STATEMENT,EXAMPLE d!clear 10....TRY AGIAN')
+            if(!args[1]) return message.reply('DRIFLOON!,ERROR!! DEFINE THE SECOND STATEMENT,EXAMPLE d!clear 2....TRY AGIAN')
             message.channel.bulkDelete(args[1]);
             break;
         case 'i-wanna-make-my-own-discord-bot':
@@ -44,11 +45,14 @@ bot.on('message', message=>{
         case 'DVD':
             message.channel.send('WELL I CAN"T MAKE YOU A DVD BUT I CAN SHOW YOU A PICTURE OF ONE https://i.ebayimg.com/images/g/sP8AAOSwZVlXis-L/s-l400.jpg')
             break;
-        case 'Upcoming Commands':
+        case 'upcoming-commands':
             message.channel.send('Theese Commands Are The Ones Coming To My Bot Soon, d!say')
+        case 'update-log':
+            message.channel.send('Drifloon Version 2.0.0 Updates 8/27/2020 Now theres the Update Log Also The d!upcoming-commands is fixed...')
+            break;
             
     }
 })
 
 
-bot.login(process.env.token);
+bot.login(token);
